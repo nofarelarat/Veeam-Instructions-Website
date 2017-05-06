@@ -1,0 +1,161 @@
+﻿
+@{
+    ViewBag.Title = "Backup";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@ViewBag.Title:</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+</head>
+<body id='body'>
+    <script>
+	function scrollTo(id) {
+		$('html,body').animate({
+		   scrollTop: $('#' + id).offset().top
+		}, 700);
+	}
+    </script>
+    <!-- NAVBAR -->
+    <div class="navbar-wrapper">
+        <div class="container">
+
+            <nav class="navbar navbar-inverse navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand"></a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a onclick='scrollTo("AddHost")'>Add Host</a></li>
+                            <li><a onclick='scrollTo("AddRepository")'>Add Repository</a></li>
+                            <li><a onclick='scrollTo("AddBackupJob")'>Add Backup Job</a></li>
+                            <!--<li><a onclick='scrollTo("BackupToTape")'>Backup To Tape</a></li>-->
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- BACKGROUND IMAGE -->
+    <div class="background-section">
+        <div class="gallery-wrapper">
+            <h3 class="summery-text"><b>Lern how to backup Veeam Application<br /> with this WebSite.</b></h3>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="message" id="AddHost">
+            <div class="container">
+                <h3>Add host to the backup system:</h3>
+                <div class="panel-body">
+                    <p>Click on VIRTUAL MACHINES</p>
+                    <br />
+                    <img src="images\bone.PNG" alt="level1">
+                    <br />
+                    <br />
+                    <p>Choose VMware vSphere or Microsoft Hyper-V</p>
+                    <p>Then right-click -> Add server</p>
+                    <br />
+                    <img src="images\btwo.PNG" alt="level2">
+                    <br />
+                    <br />
+                    <p>Click "next" and again "next" and then "finish"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="message" id="AddRepository">
+            <div class="container">
+                <h3>Add Repository to the backup system:</h3>
+                <div class="panel-body">
+                    <p>Click on BACKUP INFRASTRUCTURE</p>
+                    <p>Click on Backup Repositories</p>
+                    <p>Then right-click -> Add Backup Repository</p>
+                    <br />
+                    <img src="images\bone1.PNG" alt="level1">
+                    <br />
+                    <br />
+                    <p>Choose name and then click "next"</p>
+                    <p>Choose the backup repository type and then click "next"</p>
+                    <p>Choose the repository server and then click "next"</p>
+                    <br />
+                    <img src="images\btwo1.PNG" alt="level2">
+                    <br />
+                    <br />
+                    <p>Click "browse" and choose the repository path and then click "next"</p>
+                    <br />
+                    <img src="images\bthree1.PNG" alt="level3">
+                    <br />
+                    <br />
+                    <p>vPower NFS Service is a Microsoft Windows service that runs on</p>
+                    <p>a Microsoft Windows machine and enables this machine to act as an NFS server</p>
+                    <p>It used to verify VM backups</p>
+                    <p>Click "next" and again "next" for creating the backup repository</p>
+                    <p>Click "finish"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="message" id="AddBackupJob">
+            <div class="container">
+                <h3>Add Backup Job:</h3>
+                <div class="panel-body">
+                    <p>Click on BACKUP & REPLICATION</p>
+                    <p>Click jobs -> Backup</p>
+                    <p>Then right-click -> Backup...</p>
+                    <br />
+                    <img src="images\bone2.PNG" alt="level1">
+                    <br />
+                    <br />
+                    <p>Choose name and then click "next"</p>
+                    <p>Click on "Add" to add the virtual machines you want to backup</p>
+                    <p>You can add the entire host and exclude some of the the machines</p>
+                    <p>Then click "next"</p>
+                    <p>Choose the backup repository to store the backup files</p>
+                    <p>Choose How much restore points you need</p>
+                    <p>Then click "Advances"</p>
+                    <br />
+                    <img src="images\btwo2.PNG" alt="level2">
+                    <br />
+                    <br />
+                    <p>In the backup tab Choose the backup mode</p>
+                    <p>You can choose to save an active full backup</p>
+                    <p>Add then click "OK" and "next"</p>
+                    <br />
+                    <img src="images\bthree2.PNG" alt="level3">
+                    <br />
+                    <br />
+                    <p>Click "next"</p>
+                    <p>you can schedule your job or to run it once</p>
+                    <br />
+                    <img src="images\bfour2.PNG" alt="level4">
+                    <br />
+                    <br />
+                    <p>Click "create" and then "finish"</p>
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <a class="pull-right" style="margin:0 5% 0 0;" onclick="scrollTo('body')">Back to top</a>
+        <p style="margin:2% 0 0 5%;">&copy; 2017 OKEY Tech, Inc.</p>
+    </footer>
+
+</body>
+</html>

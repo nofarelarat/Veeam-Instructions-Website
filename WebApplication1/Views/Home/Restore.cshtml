@@ -1,0 +1,150 @@
+﻿@{
+    ViewBag.Title = "Restore";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@ViewBag.Title:</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+</head>
+<body id='body'>
+    <script>
+	function scrollTo(id) {
+		$('html,body').animate({
+		   scrollTop: $('#' + id).offset().top
+		}, 700);
+	}
+    </script>
+    <!-- NAVBAR -->
+    <div class="navbar-wrapper">
+        <div class="container">
+
+            <nav class="navbar navbar-inverse navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand"></a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a onclick='scrollTo("entireVM")'>entireVM</a></li>
+                            <li><a onclick='scrollTo("VMfiles")'>VM files</a></li>
+                            <li><a onclick='scrollTo("Machinefiles")'>Machinefiles</a></li>
+                            <!--<li><a onclick='scrollTo("RestoreFromTape")'>Restore From Tape</a></li>-->
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- BACKGROUND IMAGE -->
+    <div class="background-section">
+        <div class="gallery-wrapper">
+            <h3 class="summery-text"><b>Lern how to restore from Veeam Application<br /> with this WebSite.</b></h3>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="message" id="entireVM">
+            <div class="container">
+                <h3>Restore entire VM:</h3>
+                    <div class="panel-body">
+                        <p>Click on "HOME" and then "restore", choose "Entire VM" and then click "next"</p>
+                        <br />
+                        <p>
+                        <img src="images\one.jpg" alt="level1">
+                        </p>
+                        <br />
+                        <p>Click on "Add VM" and then "from infrastructure" or "from backup", </p>
+                        <p>Find the VM you want to restore in the new window.</p>
+                        <p>Click "Add", and then click "next".</p>
+                        <br />
+                        <img src="images\two.jpg" alt="level2">
+                        <br />
+                        <br />
+                        <p>You can choose to restore to the original location or to a new location.</p>
+                        <p>If you choose "restore to the original location" this is your last step,</p>
+                        <p>just click "next" and again "next" and then "finish"</p>
+                        <p>if you choose "restore to a new location" click "next",</p>
+                        <p>choose the destination host and then click "next".</p>
+                        <p>Click on "path" to choose where to store the machin</p>
+                        <br />
+                        <img src="images\three.jpg" alt="level3">
+                        <br />
+                        <br />
+                        <p>Click on "network" to change the default network settings.</p>
+                        <p>You can change the destination virtual switch and then click "next"</p>
+                        <p>Click on "name" to change the name of the machine in the destination.</p>
+                        <p>Click on "UUID" to change the id of the machine in the destination.</p>
+                        <p>Click "next" and again "next" and then "finish"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    <div class="container-fluid">
+        <div class="message" id="VMfiles">
+            <div class="container">
+                <h3>Restore VM files:</h3>
+                <div class="panel-body">
+                    <p>Click on "HOME" and then "restore", choose "VM files" and then click "next"</p>
+                    <br />
+                    <img src="images\one1.JPG" alt="level1">
+                    <br />
+                    <br />
+                    <p>Choose the restore point and then click "next".</p>
+                    <p>Choose where to store the file and click "next"</p>
+                    <br />
+                    <img src="images\two1.JPG" alt="level2">
+                    <br />
+                    <br />
+                    <p>Click "next" and again "next" and then "finish"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="message" id="Machinefiles">
+            <div class="container">
+                <h3>Restore files from machine:</h3>
+                <div class="panel-body">
+                    <p>Click on "HOME" and then "restore", choose "Guest files (windows) files" and then click "next"</p>
+                    <p>You can choose "Guest files (other OS)" for non windows machines</p>
+                    <br />
+                    <img src="images\one2.PNG" alt="level1">
+                    <br />
+                    <br />
+                    <p> click "finish" to open the another console</p>
+                    <p>Choose the virtual machine you want to restore and then click "mext"</p>
+                    <p>Choose the testore point and then click "next"</p>
+                    <p>Click "next" and then click "finish" to open the "restore files" console</p>
+                    <br />
+                    <img src="images\two2.PNG" alt="level2">
+                    <br />
+                    <br />
+                    <p>Choose the file you want to restore and then click "restore"</p>
+                    <p>Choose if you want to override the existing file or to keep it</p>
+                    <p>Choose the fit credentials and then click "OK" to start the restore</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+
+        <!-- FOOTER -->
+        <footer>
+            <a class="pull-right" style="margin:0 5% 0 0;" onclick="scrollTo('body')">Back to top</a>
+            <p style="margin:2% 0 0 5%;">&copy; 2017 OKEY Tech, Inc.</p>
+        </footer>
+
+</body>
+</html>

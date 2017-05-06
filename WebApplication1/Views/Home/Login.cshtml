@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<!DOCTYPE html>
+<html>
+<h2>@ViewBag.Title:</h2>
+    
+<body bgcolor="gold" font-color="red">
+    <script>
+        function goto() {
+        }
+    </script>
+    <form action="/home/Log_user" method="post" name="myForm1" onsubmit="return(goto())">
+        <table border='0' width='480px' cellpadding='0' cellspacing='0' align='center'>
+
+            <tr>
+                <td align="center">ID</td>
+                <td><input type="text" name="id" /></td>
+            </tr>
+            <tr> <td>&nbsp;</td> </tr>
+            <tr>
+                <td align="center">password</td>
+                <td><input type="text" name="pass1" /></td>
+            </tr>
+            <tr> <td>&nbsp;</td> </tr>
+            <tr>
+                <td align="center"></td>
+                <td><input type="submit" value="login" /></td>
+            </tr>
+
+        </table>
+    </form>
+
+
+</body>
+</html>
